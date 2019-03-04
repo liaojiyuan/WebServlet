@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WebServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>GLOBAL_NAME</param-name>
+  	<param-value>GCC</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>MyServlet</servlet-name>
+  	<servlet-class>service.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>MyServlet2</servlet-name>
+  	<servlet-class>service.MyServlet2</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet2</servlet-name>
+    <url-pattern>/MyServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyServlet2</servlet-name>
+    <!--一个已经被注册的servlet可以被多次映射  -->
+    <url-pattern>/MyServlet21</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>MyServlet3</servlet-name>
+  	<servlet-class>service.MyServlet3</servlet-class>
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>gaochaochao</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet3</servlet-name>
+    <url-pattern>/MyServlet3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>MyServlet4</servlet-name>
+  	<servlet-class>service.MyServlet4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet4</servlet-name>
+    <url-pattern>/MyServlet4</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>MyServlet5</servlet-name>
+  	<servlet-class>service.MyServlet5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet5</servlet-name>
+    <url-pattern>/MyServlet5</url-pattern>
+  </servlet-mapping>
+</web-app>
