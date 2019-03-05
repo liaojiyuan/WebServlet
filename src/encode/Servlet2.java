@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2019年2月28日
  * @description
  */
-public class Servlet extends HttpServlet {
+public class Servlet2 extends HttpServlet {
 
 	private static final long serialVersionUID = 61713865921365229L;
 
@@ -21,12 +21,11 @@ public class Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		ServletOutputStream out = resp.getOutputStream();
+		// out.write("aaa".getBytes()); //ok
+		//
+		// out.write("中国".getBytes()); //ok getByte()方法会默认使用字符串自身的编码格式转换成字节数组
 
-		// out.print("aaa");
-		// OutputStream是输出二进制数据的，print方法要把字符串改成二进制数据
-		// tomcat 使用ISO 8859-1编码对其转换，
-		// “中国”是汉字gbk编码格式的，所以转换出错 报错500
-		out.print("中国");
+		out.write("中国".getBytes("utf-8"));
 
 	}
 
