@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body>
+    <form action="/WebServlet/UserServlet" method="post">
+		<table>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+         <tr>
+            <td>性别：</td>
+            <td>
+            	<input type="radio" name="gender" value="男">男
+            	<input type="radio" name="gender" value="女">女
+            </td>
+        </tr>
+        <input type="hidden" name="aaa" value="my name is gaochaochao">
+        <tr>
+        	<td>爱好</td>
+        	<td>
+        		<input type="checkbox" name="hobbies" value="游泳">游泳
+        		<input type="checkbox" name="hobbies" value="划水">划水
+        		<input type="checkbox" name="hobbies" value="骑行">骑行
+        		<input type="checkbox" name="hobbies" value="看书">看书
+        	</td>
+        </tr>
+        <tr>
+            <td>你来自哪里：</td>
+         	<td>
+            	<select  name="address">
+            		<option value="广州" >广州</option>
+            		<option value="深圳" >深圳</option>
+            		<option value="北京" >北京</option>
+            		<option value="上海" >上海</option>
+            	</select>
+            </td>
+             <!--  <td>
+            	<input list="address"/>
+            	<datalist  id="address">
+            		<option value="广州" >广州</option>
+            		<option value="深圳" >深圳</option>
+            		<option value="北京" >北京</option>
+            		<option value="上海" >上海</option>
+            	</datalist>
+            </td>--> 
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="注册"></td>
+            <td><input type="reset" value="重置"></td>
+        </tr>
+    </table>
+	</form>
+  </body>
+</html>

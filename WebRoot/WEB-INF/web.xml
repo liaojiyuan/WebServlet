@@ -119,7 +119,15 @@
     <servlet-name>MyServlet11</servlet-name>
     <url-pattern>/MyServlet11</url-pattern>
   </servlet-mapping>
-  
+  <!-- request 提交表单相关验证 -->
+  <servlet>
+  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-class>service.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
   <!--response 输出数据编码 相关  -->
   <servlet>
   	<servlet-name>Servlet</servlet-name>
