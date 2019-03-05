@@ -65,8 +65,62 @@
     <servlet-name>MyServlet5</servlet-name>
     <url-pattern>/MyServlet5</url-pattern>
   </servlet-mapping>
+  <!-- 网页自动刷新 -->
+  <servlet>
+  	<servlet-name>MyServlet6</servlet-name>
+  	<servlet-class>service.MyServlet6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet6</servlet-name>
+    <url-pattern>/MyServlet6</url-pattern>
+  </servlet-mapping>
+  <!-- 缓存 -->
+  <servlet>
+  	<servlet-name>MyServlet7</servlet-name>
+  	<servlet-class>service.MyServlet7</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet7</servlet-name>
+    <url-pattern>/MyServlet7</url-pattern>
+  </servlet-mapping>
+  <!--response重定向相关  -->
+  <servlet>
+  	<servlet-name>MyServlet8</servlet-name>
+  	<servlet-class>service.MyServlet8</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet8</servlet-name>
+    <url-pattern>/MyServlet8</url-pattern>
+  </servlet-mapping>
+  <!-- 文件压缩相关 -->
+  <servlet>
+  	<servlet-name>MyServlet9</servlet-name>
+  	<servlet-class>service.MyServlet9</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet9</servlet-name>
+    <url-pattern>/MyServlet9</url-pattern>
+  </servlet-mapping>
+  <!-- 生成随机图片 -->
+  <servlet>
+  	<servlet-name>MyServlet10</servlet-name>
+  	<servlet-class>service.MyServlet10</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet10</servlet-name>
+    <url-pattern>/MyServlet10</url-pattern>
+  </servlet-mapping>
   
-  <!--response 相关  -->
+  <servlet>
+  	<servlet-name>MyServlet11</servlet-name>
+  	<servlet-class>service.MyServlet11</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet11</servlet-name>
+    <url-pattern>/MyServlet11</url-pattern>
+  </servlet-mapping>
+  
+  <!--response 输出数据编码 相关  -->
   <servlet>
   	<servlet-name>Servlet</servlet-name>
   	<servlet-class>encode.Servlet</servlet-class>
@@ -90,5 +144,22 @@
   <servlet-mapping>
     <servlet-name>Servlet3</servlet-name>
     <url-pattern>/Servlet3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>Servlet4</servlet-name>
+  	<servlet-class>encode.Servlet4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet4</servlet-name>
+    <url-pattern>/Servlet4</url-pattern>
+  </servlet-mapping>
+  <!--文件下载  -->
+  <servlet>
+  	<servlet-name>DownloadServlet</servlet-name>
+  	<servlet-class>download.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/DownloadServlet</url-pattern>
   </servlet-mapping>
 </web-app>

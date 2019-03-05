@@ -1,9 +1,8 @@
-package encode;
+package service;
 
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,24 +12,23 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2019年2月28日
  * @description
  */
-public class Servlet2 extends HttpServlet {
+public class MyServlet6 extends HttpServlet {
 
 	private static final long serialVersionUID = 61713865921365229L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// 每三秒网页自动刷新一次
 		resp.setContentType("text/html;charset=utf-8");
-		ServletOutputStream out = resp.getOutputStream();
-		// out.write("aaa".getBytes()); //ok
-		//
-		// out.write("中国".getBytes()); //ok getByte()方法会默认使用字符串自身的编码格式转换成字节数组
-
-		out.write("中国aaa".getBytes());
-
+		// resp.setHeader("refresh", "3");
+		// resp.getWriter().write("当前时间是" + System.currentTimeMillis());
+		resp.setHeader("Refresh", "3;url='/WebServlet/index.jsp'");
+		resp.getWriter().write("当前时间是" + System.currentTimeMillis());
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 	}
+
 }

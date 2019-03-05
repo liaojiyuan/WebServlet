@@ -22,5 +22,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     This is my JSP page. <br>
+    <div id="img">
+    <img src="${pageContext.request.contextPath}/pictures/1.jpg"/>
+    </div>
   </body>
 </html>

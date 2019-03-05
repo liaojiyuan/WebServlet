@@ -20,9 +20,15 @@ public class Servlet3 extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// 设置头信息，告诉浏览器我回送数据的编码时UTF-8格式的
-		resp.setHeader("content-type", "text/html;charset=UTF-8");
+		/*
+		 * //第一种方式，设置响应头回送数据的类型 resp.setHeader("content-type",
+		 * "text/html;charset=UTF-8"); ServletOutputStream out
+		 * =resp.getOutputStream(); out.write("中国".getBytes());
+		 */
 		ServletOutputStream out = resp.getOutputStream();
-		out.write("中国".getBytes());
+		// 使用meta标签模拟http消息头，告诉浏览器被回送数据的编码格式
+		out.write("<meta http-equiv='content-type' content='text/html;charset=utf-8'>".getBytes());
+		out.write("中国".getBytes("utf-8"));
 	}
 
 	@Override
