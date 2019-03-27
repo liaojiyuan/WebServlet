@@ -24,6 +24,8 @@ public class UserServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
+		String queryString = req.getQueryString();
+		System.out.println(queryString); // 无数据 这个是表单提交数据，封装在formData里面不是在url？后面
 		// 通过html 的name属性，获取到值
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
@@ -38,12 +40,16 @@ public class UserServlet extends HttpServlet {
 		System.out.println(username);
 		System.out.println(password);
 		System.out.println(gender);
-		for (int i = 0; i < hobbies.length; i++)
-			System.out.print(hobbies[i]);
-		System.out.println();
-		for (int i = 0; i < address.length; i++)
-			System.out.print(address[i]);
-		System.out.println();
+		if (null != hobbies) {
+			for (int i = 0; i < hobbies.length; i++)
+				System.out.print(hobbies[i]);
+			System.out.println();
+		}
+		if (null != address) {
+			for (int i = 0; i < address.length; i++)
+				System.out.print(address[i]);
+			System.out.println();
+		}
 
 		// System.out.println(hobbies.toString());
 		// System.out.println(address.toString());

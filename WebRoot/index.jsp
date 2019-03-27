@@ -13,8 +13,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -22,8 +20,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     This is my JSP page. <br>
+    <div id="linklist">
+    <a href="/WebServlet/MyServlet12?username=aaa">使用超链接携带数据到浏览器页面输出</a>
+    </div>
     <div id="img">
     <img src="${pageContext.request.contextPath}/pictures/1.jpg"/>
     </div>
+    
   </body>
 </html>

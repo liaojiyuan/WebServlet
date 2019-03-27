@@ -14,7 +14,33 @@
   	<param-name>GLOBAL_NAME</param-name>
   	<param-value>GCC</param-value>
   </context-param>
+  <!--session 登录验证用户  -->
+  <servlet>
+  	<servlet-name>SessionUserLogin</servlet-name>
+  	<servlet-class>session.SessionUserLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionUserLogin</servlet-name>
+    <url-pattern>/SessionUserLogin</url-pattern>
+  </servlet-mapping>
+  <!--session验证防止表单重复提交 通过服务器端token和客户端token比较方法  -->
+  <servlet>
+  	<servlet-name>SessionUserLogin2</servlet-name>
+  	<servlet-class>session.SessionUserLogin2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionUserLogin2</servlet-name>
+    <url-pattern>/SessionUserLogin2</url-pattern>
+  </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>SessionVerifyCode</servlet-name>
+  	<servlet-class>session.SessionVerifyCode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionVerifyCode</servlet-name>
+    <url-pattern>/SessionVerifyCode</url-pattern>
+  </servlet-mapping>
   <servlet>
   	<servlet-name>MyServlet</servlet-name>
   	<servlet-class>service.MyServlet</servlet-class>
@@ -110,7 +136,6 @@
     <servlet-name>MyServlet10</servlet-name>
     <url-pattern>/MyServlet10</url-pattern>
   </servlet-mapping>
-  
   <servlet>
   	<servlet-name>MyServlet11</servlet-name>
   	<servlet-class>service.MyServlet11</servlet-class>
@@ -118,6 +143,16 @@
   <servlet-mapping>
     <servlet-name>MyServlet11</servlet-name>
     <url-pattern>/MyServlet11</url-pattern>
+  </servlet-mapping>
+  
+  <!--通过超链接将数据带给浏览器  -->
+  <servlet>
+  	<servlet-name>MyServlet12</servlet-name>
+  	<servlet-class>service.MyServlet12</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet12</servlet-name>
+    <url-pattern>/MyServlet12</url-pattern>
   </servlet-mapping>
   <!-- request 提交表单相关验证 -->
   <servlet>
@@ -170,4 +205,36 @@
     <servlet-name>DownloadServlet</servlet-name>
     <url-pattern>/DownloadServlet</url-pattern>
   </servlet-mapping>
+  <!--request转发实现servlet通信  -->
+  <servlet>
+  	<servlet-name>DispatcherServlet</servlet-name>
+  	<servlet-class>dispatcher.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>/DispatcherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>DispatcherServlet2</servlet-name>
+  	<servlet-class>dispatcher.DispatcherServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet2</servlet-name>
+    <url-pattern>/DispatcherServlet2</url-pattern>
+  </servlet-mapping>
+  
+  <!--Cookie相关  -->
+  <servlet>
+  	<servlet-name>CookieServlet</servlet-name>
+  	<servlet-class>cookie.CookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieServlet</servlet-name>
+    <url-pattern>/CookieServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!--session超时时间相关 单位 分钟  -->
+  <session-config>
+  	<session-timeout>5</session-timeout>
+  </session-config>
 </web-app>
